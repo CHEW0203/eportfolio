@@ -147,10 +147,11 @@
   $(document).ready(function() {
     $('.venobox').venobox();
   });
+// ===== Force correct initial state on GitHub Pages =====
 $(window).on('load', function () {
   if (!window.location.hash) {
-    $('#header').removeClass('header-top');
-    $('section').removeClass('section-show');
+    window.location.hash = '#header';
   }
 });
+
 })(jQuery);
