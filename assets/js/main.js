@@ -147,5 +147,10 @@
   $(document).ready(function() {
     $('.venobox').venobox();
   });
-
+$(window).on('load', function () {
+  if (!window.location.hash) {
+    $('#header').removeClass('header-top');
+    $('section').removeClass('section-show');
+  }
+});
 })(jQuery);
